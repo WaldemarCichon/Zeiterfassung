@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5D5D5D" >
+
+    <TextView
+        android:id="@+id/tvObjectAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/MPZE_TITLE"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvColon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvObjectAction"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_subtitle"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/tvColon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:maxHeight="30dp"
+        android:maxWidth="30dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/haus_g3" />
+
+    <Button
+        android:id="@+id/btOk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btOk" />
+
+    <ImageView
+        android:id="@+id/imageTextBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_below="@+id/tvVersion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_1" />
+
+    <TextView
+        android:id="@+id/tvVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/version"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/HermannCommunication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageTextBackground"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/h_logo" />
+
+</RelativeLayout>

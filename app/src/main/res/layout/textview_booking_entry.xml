@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvGrouppingItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F4EFBC"
+        android:text="Januar"
+        android:textAlignment="center"
+        android:textColor="#02589C"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+    android:id="@+id/tvTimestamp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="28.01.2012 - 15:11"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textStyle="bold" >
+
+</TextView>
+
+    <TextView
+        android:id="@+id/tvObjectAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="Objekt - Tätigkeit"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</LinearLayout>

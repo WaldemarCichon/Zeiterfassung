@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="fill_horizontal"
+    android:orientation="vertical"
+    android:scrollbarStyle="outsideOverlay" >
+
+    <TextView
+        android:id="@+id/tvServerAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvServerAddress"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/etServerAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvMailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvMailAddress"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/etMailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvChoiceKind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvChoiceKind"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <RadioGroup
+                android:id="@+id/rgChoiceKind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/rbClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/rbClick" />
+
+                <RadioButton
+                    android:id="@+id/rbDoubleClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rbDoubleClick"
+                    android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/rbLongClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/longClick"
+                    android:visibility="visible" />
+
+                <RadioButton
+                    android:id="@+id/rbMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rbMenu" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvChoiceTaskKind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvChoiceTaskKind"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <RadioGroup
+                android:id="@+id/rgTaskChoiceKind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/rbMenuTask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/rbMenue" />
+
+                <RadioButton
+                    android:id="@+id/rbClickTask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rbClick" />
+
+                <RadioButton
+                    android:id="@+id/rbButtonTask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rbButton" />
+
+                <RadioButton
+                    android:id="@+id/rbLongClickTask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/longClick"
+                    android:visibility="visible" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvSendKind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvSendKind"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <RadioGroup
+                android:id="@+id/rgSendKind"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp" >
+
+                <RadioButton
+                    android:id="@+id/rbImmediately"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/rbDirect" />
+
+                <RadioButton
+                    android:id="@+id/rbAtEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rbAtEnd" />
+
+                <RadioButton
+                    android:id="@+id/rbManually"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rbManually" />
+            </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/cbTaskChoiceIcons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cbTaskChoiceIcons" />
+
+            <CheckBox
+                android:id="@+id/cbShowTaskEndPanel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/show_task_end_panel" />
+
+            <TextView
+                android:id="@+id/lbDeviceID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbDeviceId"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/etDeviceId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:text="@string/stdDeviceId" />
+
+            <CheckBox
+                android:id="@+id/cbVuewComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/viewComment" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

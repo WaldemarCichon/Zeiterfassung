@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/menu_load_data" android:title="@string/loadData" android:orderInCategory="100"></item>
+    <item android:id="@+id/menu_save_settings" android:title="@string/save_settings" android:orderInCategory="200"></item>
+    <item android:id="@+id/menu_test" android:title="@string/test" android:orderInCategory="300"></item>
+    <item android:id="@+id/menu_load_icons" android:orderInCategory="400" android:title="@string/loadIcons"></item>
+    <item android:id="@+id/menu_upload" android:title="Upload" android:orderInCategory="450"></item>
+    <item android:id="@+id/menu_download" android:orderInCategory="475" android:title="Download"></item>
+    <item android:id="@+id/cancel" android:title="@string/cancel" android:orderInCategory="500"></item>
+    
+    
+    
+    
+    
+
+</menu>

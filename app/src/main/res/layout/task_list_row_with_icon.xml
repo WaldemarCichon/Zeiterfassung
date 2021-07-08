@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/imageTextBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/ListElement"
+        android:src="@drawable/list_element" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="10dp"
+        android:padding="3dp" >
+
+        <ImageView
+            android:id="@+id/taskIcon"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/question_mark" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/taskRowTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/linearLayout1"
+        android:lines="1"
+        android:paddingTop="10dp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/taskRowSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/taskRowTitle"
+        android:layout_below="@id/taskRowTitle"
+        android:lines="1"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

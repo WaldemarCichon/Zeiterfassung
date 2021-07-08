@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/menu_shownObjects" android:title="@string/shownObjects" android:orderInCategory="100">
+        <menu>
+            <item android:id="@+id/menu_choose_all" android:title="@string/chooseAllObjects" android:orderInCategory="110" android:checkable="true"/>
+            <item android:id="@+id/menu_choose_my_objects" android:title="@string/chooseMyObjects" android:checked="true" android:orderInCategory="120" android:checkable="true"/>
+            <item android:id="@+id/menu_choose_standins_objects" android:title="@string/chooseStandInObjects" android:orderInCategory="130" android:checkable="true"/>
+            <item android:id="@+id/menu_choose_both" android:title="@string/chooseBoth" android:checkable="true" android:orderInCategory="140"/>
+        </menu>
+    </item>
+    <item android:id="@+id/menu_show_more" android:title="@string/menu_show_more" android:orderInCategory="200">
+        <menu>
+            <item android:id="@+id/menu_show_bookings" android:orderInCategory="150" android:title="@string/menu_show_bookings"></item>
+            <item android:id="@+id/menu_settings" android:title="@string/menu_settings" android:orderInCategory="200" />
+            <item android:id="@+id/menu_show_logs" android:titleCondensed="@string/menu_logs" android:orderInCategory="210" android:title="@string/menu_logs"/><item android:id="@+id/menu_about" android:orderInCategory="220" android:title="@string/mn_about"/><item android:id="@+id/menu_send" android:title="@string/menu_send" android:orderInCategory="230" android:enabled="false" android:visible="false"></item>
+            <item android:id="@+id/menu_stand_in" android:orderInCategory="240" android:title="@string/chooseStandIn" ></item>
+            <item android:id="@+id/menu_book_subworker" android:title="@string/menu_book_subworker" android:orderInCategory="999"/>
+            <item android:id="@+id/menu_reload_settings" android:orderInCategory="900" android:title="@string/reload_setting"/>
+         </menu>
+    </item>
+    <item android:id="@+id/menu_show_search_field" android:orderInCategory="500" android:title="@string/show_search_field" android:checked="true" android:icon="@drawable/search_icon" android:checkable="true" android:showAsAction="always"></item><item android:id="@+id/menu_app_end" android:title="@string/app_end" android:orderInCategory="900"></item>
+    <item android:id="@+id/menu_test_k2soap" android:title="@string/menu_test_k2soap" android:titleCondensed="K2SOAP" android:orderInCategory="999" android:enabled="false" android:visible="false"></item>
+    
+</menu>

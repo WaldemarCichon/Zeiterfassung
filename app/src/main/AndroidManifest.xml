@@ -1,0 +1,84 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.cisoft.zeiterfassung"
+    android:versionCode="11"
+    android:versionName="1.24" >
+
+    <uses-sdk
+        android:targetSdkVersion="26" /> <!-- minSdk was 10, targetSdk was 13 -->
+	 <uses-permission
+	     android:name="android.permission.INTERNET">
+	 </uses-permission>
+	 <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	 <uses-permission android:name="android.permission.VIBRATE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/haus_g3"
+        android:label="@string/title_mpze"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_mpze" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ProjectsView"
+            android:label="@string/title_activity_projects_view" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ProjectsView" />
+        </activity>
+        <activity
+            android:name=".ui.K2SoapView"
+            android:label="@string/title_activity_projects_view" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="SoapActivity" />
+        </activity>
+        <activity 
+            android:name=".ui.LogViewActivity"
+            android:label="Logs und Buchungen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="LogActivity" />
+        </activity>
+        <activity android:name=".ui.ChooseTaskView" android:label="@string/title_activity_choose_task"></activity>
+        <activity android:name=".ui.SettingsView" android:label="@string/settingsTitle"></activity>
+        <activity android:name=".ui.StandInView" android:label="@string/chooseStandIn"></activity>
+        <activity android:name=".ui.StandardBookingView" android:label="Buchungen"></activity>
+        <activity android:name=".ui.ActivityUploadChooser" android:label="Download wählen"></activity>
+        <receiver android:name=".widget.BookingsWidget" android:label="@string/widget_label" android:icon="@drawable/haus_g3" android:enabled="true" android:description="@string/booking_widget_description">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name=".widget.BookingWidget.ACTION_CLICK"/>
+            </intent-filter>
+            <meta-data 
+                android:name="android.appwidget.provider"
+                android:resource="@xml/booking_widget_info">
+            </meta-data>
+        </receiver>
+        <receiver android:name=".widget.BookingsListWidget" android:label="@string/widget_booking_list_label" android:icon="@drawable/haus_g3" android:enabled="true" android:description="@string/booking_list_widget_description">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name=".widget.BookingListWidget.REFRESH"/>
+            </intent-filter>
+            <meta-data 
+                android:name="android.appwidget.provider"
+                android:resource="@xml/booking_list_widget_info">
+            </meta-data>
+        </receiver>
+        <activity android:label="Buchungen wiederholt senden" android:name=".ui.ResendBookingsView"></activity>
+        <service
+   			android:name=".widget.BookingWidgetService"
+   			android:permission="android.permission.BIND_REMOTEVIEWS" />
+        <service
+   			android:name=".widget.BookingListWidgetService"
+   			android:permission="android.permission.BIND_REMOTEVIEWS" />
+        <service android:name=".widget.BookingWidgetRefreshService"/>
+        <activity android:name="de.cisoft.framework.android.ui.GlobalExceptionHandler" android:label="Ein Fehler ist aufgetreten" android:process=":report_process"></activity>
+        <activity android:name=".ui.AboutView" android:label="@string/about"></activity>
+    </application>
+
+</manifest>

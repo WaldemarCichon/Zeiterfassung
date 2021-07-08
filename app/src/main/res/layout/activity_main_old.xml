@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/btOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btOk" />
+
+    <TextView
+        android:id="@+id/tvObjectAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/MPZE_TITLE"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/taskIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tvVersion"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="false"
+        android:contentDescription="@string/logo_company"
+        android:scaleType="fitXY"
+        android:src="@drawable/logo_swg" />
+
+    <TextView
+        android:id="@+id/tvVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/taskIcon"
+        android:layout_centerHorizontal="true"
+        android:text="@string/version"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvColon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvObjectAction"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_subtitle"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>
