@@ -841,6 +841,9 @@ public class ProjectsView extends ActivityWithErrorhandling implements ActivityW
 				return;
 			}
 		}
+		if (lastBooking.getAction() == Actions.ENDE) {
+			return;
+		}
 		Date lastBookingsTimestamp = lastBooking.getTimestamp();
 		Calendar calendar = GregorianCalendar.getInstance();
 		calendar.setTime(lastBookingsTimestamp);
@@ -858,7 +861,8 @@ public class ProjectsView extends ActivityWithErrorhandling implements ActivityW
 	}
 	
 	private void resetBookingStatus() {
-		sendUnconditionalEndBooking();
+		// removed 16.10.2021 on request J.Aparisi
+		// sendUnconditionalEndBooking();
 		actions.setCurrentAction(Actions.ENDE);
 		this.tvProjectTask.setText("======");
 	}
@@ -1091,11 +1095,15 @@ public class ProjectsView extends ActivityWithErrorhandling implements ActivityW
 					&& timeDiff > 12
 					|| (timeDiff > 8 && now.getDay() != Settings.getInstance()
 							.getLastTimeStamp().getDay())) {
+
+				resetBookingStatus();
+				/* removed 16.10.2021
 				if (Settings.getInstance().getBranding() == Branding.WUERZBURG) {
 					resetBookingStatus();
 				} else {
 					showQuestionDialog();
 				}
+				*/
 			}
 		}
 	}
